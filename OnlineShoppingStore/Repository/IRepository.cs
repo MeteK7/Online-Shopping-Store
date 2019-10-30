@@ -8,8 +8,9 @@ namespace OnlineShoppingStore.Repository
 {
     public interface IRepository<Tbl_Entity> where Tbl_Entity:class
     {
+        IEnumerable<Tbl_Entity> GetProduct();
         IEnumerable<Tbl_Entity> GetAllRecords();
-        IQueryable<Tbl_Entity> GetAllRecordsIQuerable();
+        IQueryable<Tbl_Entity> GetAllRecordsIQueryable();
         int GetAllRecordsCount();
         void Add(Tbl_Entity entity);
         void Update(Tbl_Entity entity);
