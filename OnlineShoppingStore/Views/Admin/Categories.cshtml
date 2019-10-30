@@ -5,20 +5,21 @@
 }
 
 <div class="container-fluid">
-
     <!-- Breadcrumbs-->
+
     <ol class="breadcrumb">
         <li class="breadcrumb-item">
             <a href="#">Dashboard</a>
         </li>
         <li class="breadcrumb-item active">Categories</li>
-    </ol>
 
+    </ol>
     <!-- DataTables Example -->
     <div class="card mb-3">
         <div class="card-header">
             <i class="fas fa-table"></i>
             Category Details
+            <a href="../Admin/AddCategory" class="btn btn-info pull-right fa fa-plus">Add New</a>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -28,6 +29,7 @@
                             <th>Sr. No.</th>
                             <th>Category Name</th>
                             <th>Action</th>
+
                         </tr>
                     </thead>
                     <tfoot>
@@ -40,22 +42,19 @@
                     <tbody>
                         @foreach (var item in Model)
                         {
+
                             <tr>
-                                <td>@(Model.IndexOf(item)+1)</td>
+                                <td>@(Model.IndexOf(item) + 1)</td>
                                 <td>@item.CategoryName</td>
                                 <td><a href="#">Edit</a></td>
+
                             </tr>
                         }
+
                     </tbody>
                 </table>
             </div>
+
         </div>
-        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
     </div>
-
-    <p class="small text-center text-muted my-5">
-        <em>More table examples coming soon...</em>
-    </p>
-
 </div>
-

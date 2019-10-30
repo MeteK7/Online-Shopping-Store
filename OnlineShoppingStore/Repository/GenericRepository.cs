@@ -20,6 +20,11 @@ namespace OnlineShoppingStore.Repository
             _dbSet = _DBEntity.Set<Tbl_Entity>();
         }
 
+        public IEnumerable<Tbl_Entity> GetProduct()
+        {
+            return _dbSet.ToList();
+        }
+
         public void Add(Tbl_Entity entity)
         {
             _dbSet.Add(entity);
@@ -36,7 +41,7 @@ namespace OnlineShoppingStore.Repository
             return _dbSet.Count();
         }
 
-        public IQueryable<Tbl_Entity> GetAllRecordsIQuerable()
+        public IQueryable<Tbl_Entity> GetAllRecordsIQueryable()
         {
             return _dbSet;
         }
@@ -110,6 +115,7 @@ namespace OnlineShoppingStore.Repository
         {
             _dbSet.Attach(entity);
             _DBEntity.Entry(entity).State = EntityState.Modified;
+            _DBEntity.SaveChanges();
         }
 
         public void UpdateByWhereClause(Expression<Func<Tbl_Entity, bool>> wherePredict, Action<Tbl_Entity> ForEachPredict)
