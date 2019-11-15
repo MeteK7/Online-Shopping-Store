@@ -107,3 +107,7 @@ C:\Users\MeteK\Desktop\Lessons\Complete MVC Applications\OnlineShoppingStore\Onl
 C:\Users\MeteK\Desktop\Lessons\Complete MVC Applications\OnlineShoppingStore\OnlineShoppingStore\obj\Debug\OnlineShoppingStore.csproj.CopyComplete
 C:\Users\MeteK\Desktop\Lessons\Complete MVC Applications\OnlineShoppingStore\OnlineShoppingStore\obj\Debug\OnlineShoppingStore.dll
 C:\Users\MeteK\Desktop\Lessons\Complete MVC Applications\OnlineShoppingStore\OnlineShoppingStore\obj\Debug\OnlineShoppingStore.pdb
+C:\Users\MeteK\Desktop\Lessons\Complete MVC Applications\OnlineShoppingStore\OnlineShoppingStore\bin\PagedList.dll
+C:\Users\MeteK\Desktop\Lessons\Complete MVC Applications\OnlineShoppingStore\OnlineShoppingStore\bin\PagedList.Mvc.dll
+C:\Users\MeteK\Desktop\Lessons\Complete MVC Applications\OnlineShoppingStore\OnlineShoppingStore\bin\PagedList.xml
+C:\Users\MeteK\Desktop\Lessons\Complete MVC Applications\OnlineShoppingStore\OnlineShoppingStore\bin\PagedList.Mvc.xml
