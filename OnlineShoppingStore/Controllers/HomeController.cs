@@ -17,6 +17,16 @@ namespace OnlineShoppingStore.Controllers
             return View(model.CreateModel(search, 4, page));
         }
 
+        public ActionResult Checkout()
+        {
+            return View();
+        }
+
+        public ActionResult CheckoutDetails()
+        {
+            return View();
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
@@ -48,13 +58,47 @@ namespace OnlineShoppingStore.Controllers
             {
                 List<Item> cart = (List<Item>)Session["cart"];
                 var product = ctx.Tbl_Product.Find(productId);
-                cart.Add(new Item()
+                foreach (var item in cart)
                 {
-                    Product = product,
-                    Quantity = 1
-                });
+                    if (item.Product.ProductId==productId)
+                    {
+                        int prevQuantity = item.Quantity;
+                        cart.Remove(item);
+                        cart.Add(new Item()
+                        {
+                            Product = product,
+                            Quantity = prevQuantity+1
+                        });
+                        break;
+                    }
+                    else
+                    {
+                        cart.Add(new Item()
+                        {
+                            Product = product,
+                            Quantity = 1
+                        });
+                    }
+                }
+
                 Session["cart"] = cart;
             }
+            return Redirect("Index");
+        }
+
+        public ActionResult RemoveFromCart(int productId)
+        {
+            List<Item> cart = (List<Item>)Session["cart"];
+            //var product = ctx.Tbl_Product.Find(productId);
+            foreach (var item in cart)
+            {
+                if (item.Product.ProductId == productId)
+                {
+                    cart.Remove(item);
+                    break;
+                }
+            }
+            Session["cart"] = cart;
             return Redirect("Index");
         }
     }
