@@ -230,6 +230,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Account.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CategoryDetail.cs" />
     <Compile Include="Models\Home\HomeIndexViewModel.cs" />
@@ -1863,12 +1864,15 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\bg.jpg" />
     <Content Include="Images\search.png" />
     <Content Include="Images\searchIcon.png" />
     <Content Include="Images\sony-xperia-5-2.jpg" />
     <Content Include="Images\sony-xperia-5.jpg" />
     <Content Include="Images\Sony_1100x500_05.jpg" />
     <Content Include="Images\xperia-5-primary-product-image.png" />
+    <Content Include="LoginStyle\font-awesome.css" />
+    <Content Include="LoginStyle\style.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <EntityDeploy Include="DAL\Model1.edmx">
@@ -2031,6 +2035,11 @@
     <Content Include="AdminStyle\vendor\fontawesome-free\webfonts\fa-solid-900.woff2" />
     <Content Include="AdminStyle\vendor\jquery\jquery.min.map" />
     <Content Include="AdminStyle\vendor\jquery\jquery.slim.min.map" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -2058,18 +2067,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
-    <Content Include="Views\Account\ConfirmEmail.cshtml" />
-    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
-    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
-    <Content Include="Views\Account\ForgotPassword.cshtml" />
-    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Account\Register.cshtml" />
-    <Content Include="Views\Account\ResetPassword.cshtml" />
-    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
-    <Content Include="Views\Account\SendCode.cshtml" />
-    <Content Include="Views\Account\VerifyCode.cshtml" />
     <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
     <Content Include="Views\Manage\ChangePassword.cshtml" />
     <Content Include="Views\Manage\Index.cshtml" />
@@ -2088,6 +2086,9 @@
     <Content Include="Views\Admin\CategoryEdit.cshtml" />
     <Content Include="Views\Home\CheckoutDetails.cshtml" />
     <Content Include="Views\Home\Checkout.cshtml" />
+    <Content Include="Views\_LoginLayout.cshtml" />
+    <Content Include="Views\Account\Error.cshtml" />
+    <Content Include="Views\Account\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
